@@ -1,0 +1,28 @@
+services:
+  backend:
+    build: ./backend
+    container_name: movie_explorer_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=sqlite:////data/movie_explorer.db
+      - SECRET_KEY=dev-secret
+    volumes:
+      - db_data:/data
+    # Remove healthcheck for development
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+    #   interval: 10s
+    #   timeout: 5s
+    #   retries: 5
+
+  frontend:
+    build: ./frontend
+    container_name: movie_explorer_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  db_data:
