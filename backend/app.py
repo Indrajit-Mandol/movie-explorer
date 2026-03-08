@@ -1,7 +1,4 @@
-"""
-Movie Explorer Platform - Flask Backend
-Main application entry point. Configures Flask, SQLAlchemy, CORS, and Swagger.
-"""
+
 
 import os
 from flask import Flask, jsonify
