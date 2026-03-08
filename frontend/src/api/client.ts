@@ -1,7 +1,4 @@
-/**
- * API client for communicating with the Movie Explorer backend.
- * All filtering is handled server-side.
- */
+
 
 import type {
   MoviesResponse,
