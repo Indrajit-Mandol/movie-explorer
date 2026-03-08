@@ -265,4 +265,4 @@ Actor ─────┘ (many-to-many)
 | Variable       | Default                        | Description                  |
 |----------------|--------------------------------|------------------------------|
 | `DATABASE_URL` | `sqlite:///movie_explorer.db`  | SQLAlchemy DB connection URL |
-| `SECRET_KEY`   | `dev-secret-key`               | Flask secret key             |
+| `SECRET_KEY`   | `dev-secret-key`               | Flask secret key             
